@@ -29,6 +29,7 @@ setup(
             'static/*/css/*.css',
             'static/*/img/*',
             'static/*/js/*.js',
+            'locale/*/LC_MESSAGES/*',
         ],
     },
 
