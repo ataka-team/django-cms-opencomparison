@@ -1,0 +1,157 @@
+
+.addon table {
+    border-collapse: collapse;
+    border-color: #FFFFFF;
+    border-spacing: 0;
+    font-size: 100%;
+    width: auto;
+}
+
+.btn input, .btn span {
+    border-radius: 3px 3px 3px 3px;
+    color: #5B80B2;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 20px;
+}
+
+.btn input, .btn span {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+.btn, .btn input, .btn span {
+  border: medium none;
+  cursor: pointer;
+  display: inline-block;
+  float: none;
+  margin: 0;
+  overflow: visible;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: top;
+  width: auto;
+  word-wrap: break-word;
+}
+
+.btn {
+    background: url("/static/cms_opencomparison/img/btn_white.png") repeat-x scroll left top transparent;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px 5px 5px 5px;
+    height: 40px;
+    line-height: 1.3;
+    overflow: hidden;
+    text-decoration: none !important;
+}
+
+
+.btn_blue span, .btn_blue input {
+    color: #FFFFFF;
+}
+
+.btn_blue {
+  background-image: url("/static/cms_opencomparison/img/btn_blue.png") !important;
+  border: 1px solid #5B80B2;
+}
+
+.btn_icon-link input, .btn_icon-link span {
+    background: url("/static/cms_opencomparison/img/btn_icon-link.png") no-repeat scroll right top transparent !important;
+}
+
+.btn_extra input, .btn_extra span {
+    padding-right: 55px !important;
+}
+
+.btn_small.btn_icon-link input, .btn_small.btn_icon-link span {
+  background-position: right -5px !important;
+}
+
+.btn_small input, .btn_small span {
+    font-size: 11px;
+    padding: 7px 15px;
+}
+
+.btn_small {
+  background: url("/static/cms_opencomparison/img/btn_white.png") repeat-x scroll left -5px transparent;
+  height: 30px;
+}
+
+
+.clear {
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+
+.exthead {
+  left: 0;
+  position: relative;
+  top: -6px;
+  z-index: 10;
+}
+
+.exthead strong {
+  font-size: 11px;
+  left: 0;
+  padding-right: 10px;
+  position: relative;
+  top: 5px;
+  z-index: 10;
+}
+
+.forks {
+  cursor: help;
+  display: inline-block;
+  padding-left: 18px;
+  width: 30px;
+}
+
+.nospace {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.padding-bot {
+    padding-bottom: 5px !important;
+}
+
+.sponsors h3 {
+  color: #999999;
+  font-size: 11px;
+  font-weight: normal;
+  padding-left: 6px;
+}
+
+.tbl_default th {
+    background: url("../../img/theme/table_th.png") repeat-x scroll left bottom #FFFFFF;
+    border-bottom: 1px solid #E7E7E7;
+    color: #5B80B2;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tbl_default th, table td {
+    border: 1px solid #F1F1F1;
+    color: #666666;
+    padding: 5px 12px;
+}
+
+.tbl_default .even {
+  background: none repeat scroll 0 0 #F7F9FB;
+}
+
+.tbl_default {
+    width: 100%;
+    border: 1px solid #F1F1F1;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.watchers {
+  cursor: help;
+  display: inline-block;
+  padding-left: 22px;
+  width: 30px;
+}

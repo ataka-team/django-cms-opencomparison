@@ -1,0 +1,3 @@
+include README
+recursive-include cms_opencomparison/templates *
+recursive-include cms_opencomparison/static *

@@ -1,0 +1,137 @@
+{% load sekizai_tags %}
+
+
+{% addtoblock "css" %}
+<link rel="stylesheet" href="/static/cms_opencomparison/css/style.css" type="text/css" media="screen" />
+{% endaddtoblock %}
+
+{% addtoblock "js" %}
+
+<script type="text/javascript" src="/static/cms_opencomparison/js/jquery-1.6.1.min.js"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function(){
+
+
+
+$.getJSON('/cms_opencomparison/api/grid/{{ grid.id }}', function(data) {
+
+	var items = [];
+
+	// alert (data.absolute_url);
+  
+	$.each(data.packages, function(key, val) {
+		p = val.split("/")[val.split("/").length - 2];
+
+		$.getJSON('/cms_opencomparison/api/grid/{{ grid.id }}/' + p, function(data) {
+
+      items.push(
+	      '<tr class="odd">' +
+					'<td><a href="{{ grid.baseurl }}' + data.absolute_url + '" rel="target:blank">' + data.slug + '</a></td>' +
+					'<td>' + data.repo_description + '</td>' +
+	        '<td><img src="https://chart.googleapis.com/chart?cht=bvg&amp;chs=105x20&amp;chd=t:' + data.commits_over_52 + '&amp;chco=666666&amp;chbh=1,1,1&amp;chds=0,20" alt="unavailable" /></td>' +
+				  '<td>' + data.pypi_version + '</td>' +
+				  '<td><a href="' + data.repo_url + '" class="left" rel="target:blank"> Repository </a>' +
+					  '<p class="nospace right">' +
+							'<span class="watchers" title="Watchers" style="background:url(\'/static/cms_opencomparison/img/watchers-active.png\') no-repeat left -3px;">' + data.repo_watchers + '</span>' +
+							'<span class="forks" title="Forks" style="background:url(\'/static/cms_opencomparison/img/forks-active.png\') no-repeat left -3px;">' + data.repo_forks + '</span>' +
+            '</p>' +
+          '</td>' +
+        '</tr>'
+			);
+ 
+		});
+
+	});
+
+  setTimeout(function() {
+      if ( items.length != 0) {
+        $('<tbody/>', {
+          html: items.join('')                                              
+		    }).replaceAll('tbody#cms_opencomparison_grid_{{ grid.id}}');                           
+	    } 
+    }, 1000);
+
+
+});
+
+})
+//]]>
+</script>
+
+<script src="/static/cms_opencomparison/js/TSorter_1.js"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function(){
+
+		var TableSorterCMSOpenComparisonGrid{{ grid.id }} = new TSorter;
+		TableSorterCMSOpenComparisonGrid{{ grid.id }}.init('cms_opencomparison_grid_table_{{ grid.id }}');
+
+	});
+
+//]]>
+</script>
+
+{% endaddtoblock %}
+
+
+
+<div  class=addon" style="float: left; margin: 20px;">
+
+<p class="right nospace exthead nomobile">
+  <strong>Built your own extension?</strong>
+  <a rel="target:blank" class="btn btn_small btn_blue btn_extra btn_icon-link" href="{{ grid.baseurl }}/grids/{{ grid.slug }}/package/add/" target="_blank">
+    <span>share it!</span>
+  </a>
+</p>
+
+<h1 class="nospace"> {{ grid.title }} </h1>
+<h2 class="nospace padding-bot"> {{ grid.subtitle}} </h2>
+
+<p class="right nospace exthead nomobile">
+  <strong>Powered by</strong>
+  <a rel="target:blank" class="btn btn_small" href="{{ grid.baseurl }}/grids/g/{{ grid.slug }}/" target="_blank">
+    <span>Django Packages</span>
+  </a>
+</p>
+
+<p><strong> {{ grid.description }}</strong></p>
+
+<div class="clear"></div>
+
+<table border="0" cellpadding="0" cellspacing="0" class="tbl_default" id="cms_opencomparison_grid_table_{{ grid.id }}" />
+  <colgroup>
+    <col width="20%" /><col width="35%" /><col width="10%" /><col width="9%" /><col width="26%" />
+  </colgroup>
+  <thead>
+    <tr class="even">
+      <th>Package</th>
+      <th>Descriptions</th>
+      <th>Commits</th>
+      <th>Version</th>
+<th colspan="2">Repository</th>
+    </tr>
+  </thead>
+
+  <tbody id="cms_opencomparison_grid_{{ grid.id}}" />
+
+</table>
+
+<div class="sponsors right">
+  <h3>Technologies used</h3>
+  <p>
+    <a class="first" href="http://www.python.org/">
+			<img alt="" src="/static/cms_opencomparison/img/logo_python.png">
+    </a>
+    <a href="http://www.djangoproject.com/">
+			<img alt="" src="/static/cms_opencomparison/img/logo_django.png">
+    </a>
+  </p>
+</div>
+
+</div>
+
