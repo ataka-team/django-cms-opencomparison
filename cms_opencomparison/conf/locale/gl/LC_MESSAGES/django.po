@@ -1,0 +1,55 @@
+# django-cms-opencomparison translation.
+# Copyright (C) 2011
+# This file is distributed under the same license as the
+# django-cms-opencomparison package.
+# FIRST AUTHOR <pablo.saavedra@treitos.com>, 2011.
+#
+#, fuzzy
+msgid "fuzzy"
+msgstr "fuzzy"
+"Project-Id-Version: 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-12 13:56+0100\n"
+"PO-Revision-Date: 2011-11-12 13:56+0100\n"
+"Last-Translator: Pablo Saavedra <pablo.saavedra@treitos.com>\n"
+"Language-Team: Treitos Translations <translations@treitos.com>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:9
+msgid "Opencomparison base URL"
+msgstr "URL base de Opencomparison"
+
+#: models.py:12
+msgid "Grid slug"
+msgstr "Id. (slug) da comparativa"
+
+#: models.py:15
+msgid "Grid title"
+msgstr "Título da comparativa"
+
+#: models.py:18
+msgid "Grid subtitle"
+msgstr "Subtítulo da comparativa"
+
+#: models.py:21
+msgid "Grid description"
+msgstr "Descripción da comparativa"
+
+#: templates/cms_opencomparison/grid.html:87
+msgid "Built your own extension?"
+msgstr "¿Fixexhes a túa propia extensión?"
+
+#: templates/cms_opencomparison/grid.html:89
+msgid "share it!"
+msgstr "¡Compártea!"
+
+#: templates/cms_opencomparison/grid.html:97
+msgid "Powered by"
+msgstr "Optimizado por"
+
+#: templates/cms_opencomparison/grid.html:126
+msgid "Technologies used"
+msgstr "Tecnoloxías empregadas"
