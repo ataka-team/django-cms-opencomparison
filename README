@@ -1,0 +1,21 @@
+
+Setup
+-----
+
+  - Add urls to url.py on Django project:
+
+      url(r'^api/v1/', include('cms_opencomparison.urls')),
+
+  - You can modify CSS style overwritting 
+    */static/cms_opencomparison/css/style.css* URL.
+
+Repository
+----------
+
+  - URL: https://github.com/psaavedra/django-cms-opencomparison
+
+
+References
+----------
+
+ - Highly based on Django-Shop ecpsystem page: https://www.django-shop.org/en/ecosystem/

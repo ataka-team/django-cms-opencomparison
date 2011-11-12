@@ -27,7 +27,7 @@ setup(
         'cms_opencomparison': [
             'templates/*/*.html',
             'static/*/css/*.css',
-            'static/*/images/*',
+            'static/*/img/*',
             'static/*/js/*.js',
         ],
     },
